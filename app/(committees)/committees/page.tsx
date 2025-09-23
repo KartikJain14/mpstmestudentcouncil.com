@@ -12,7 +12,7 @@ const categoryData = [
     { name: 'Council', description: 'Meet the student leaders driving university initiatives and governance.' },
     { name: 'Technical', description: 'Dive into the world of technology, from coding to robotics and beyond.' },
     { name: 'Management', description: 'Explore the domains of finance, entrepreneurship, and business strategy.' },
-    { name: 'Editorial', description: 'Editorials'},
+    { name: 'Debate', description: 'Debate'},
     { name: 'FineArts', description: 'FineArts'},
     { name: 'Social', description: 'Social'},
     { name: 'Others', description: 'Discover unique committees that cater to a variety of other interests.' },

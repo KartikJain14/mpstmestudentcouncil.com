@@ -242,7 +242,7 @@ export const committeesData: Category[] = [
         ],
       },
       {
-        name: "TRC",
+        name: "TRC - Technical and Research Cell",
         vision:
           "To build a vibrant, research-driven ecosystem that empowers students to explore, innovate, and excel in science, technology, and engineering, bridging the gap between academia and real-world applications.",
         flagshipEvents: [
@@ -764,7 +764,7 @@ export const committeesData: Category[] = [
     ],
   },
   {
-    name: "Editorial",
+    name: "Debate",
     committees: [
       {
         name: "MUNSociety",

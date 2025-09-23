@@ -8,28 +8,21 @@ import tushita from '@/public/images/supercore/tushita.png'
 import vansh from '@/public/images/supercore/vansh.png'
 import yuvanesh from '@/public/images/supercore/yuvanesh.png'
 
+const generalSecretary = {
+  name: "Vansh Chheda",
+  title: "General Secretary",
+  quote: "— Steering the team with vision, unity, and purpose.",
+  image: vansh,
+  linkedin: "https://www.linkedin.com/in/vansh-chheda-560957245/",
+};
 
-const teamMembers = [
+const jointGeneralSecretaries = [
   {
-    name: "Vansh Chheda",
-    title: "General Secretary",
-    quote: "— Steering the team with vision, unity, and purpose.",
-    image: vansh,
-    linkedin: "https://www.linkedin.com/in/vansh-chheda-560957245/",
-  },
-  {
-    name: "Aryan Bondgulwar",
-    title: "Joint General Secretary - Technical",
-    quote: "— Engineering innovation, one idea at a time.",
-    image: aryan,
-    linkedin: "https://www.linkedin.com/in/aryan-bondgulwar/",
-  },
-  {
-    name: "Tushita Shetty",
-    title: "Joint General Secretary - Editorial & Culture",
-    quote: "— Amplifying voices, celebrating stories, shaping culture.",
-    image: tushita,
-    linkedin: "https://www.linkedin.com/in/tushita-shetty/",
+    name: "Yuvanesh Gopinath",
+    title: "Joint General Secretary - Alumni",
+    quote: "— Bridging legacies, building futures.",
+    image: yuvanesh,
+    linkedin: "https://www.linkedin.com/in/yuvanesh-gopinath/",
   },
   {
     name: "Shreshtha Bindal",
@@ -39,18 +32,11 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/shreshthabindal/",
   },
   {
-    name: "Aalia Dandawala",
-    title: "Joint General Secretary - Sustainable Development Goals",
-    quote: "— Driving impact with purpose and sustainability.",
-    image: aalia,
-    linkedin: "https://www.linkedin.com/in/aaliafatema/",
-  },
-  {
-    name: "Yuvanesh Gopinath",
-    title: "Joint General Secretary - Alumni",
-    quote: "— Bridging legacies, building futures.",
-    image: yuvanesh,
-    linkedin: "https://www.linkedin.com/in/yuvanesh-gopinath/",
+    name: "Tushita Shetty",
+    title: "Joint General Secretary - Editorial & Culture",
+    quote: "— Amplifying voices, celebrating stories, shaping culture.",
+    image: tushita,
+    linkedin: "https://www.linkedin.com/in/tushita-shetty/",
   },
   {
     name: "Naman Bhatia",
@@ -58,6 +44,20 @@ const teamMembers = [
     quote: "— Fueling passion, fostering team spirit.",
     image: naman,
     linkedin: "https://jkartik.in/",
+  },
+  {
+    name: "Aalia Dandawala",
+    title: "Joint General Secretary - Sustainable Development Goals",
+    quote: "— Driving impact with purpose and sustainability.",
+    image: aalia,
+    linkedin: "https://www.linkedin.com/in/aaliafatema/",
+  },
+  {
+    name: "Aryan Bondgulwar",
+    title: "Joint General Secretary - Technical",
+    quote: "— Engineering innovation, one idea at a time.",
+    image: aryan,
+    linkedin: "https://www.linkedin.com/in/aryan-bondgulwar/",
   },
 ];
 
@@ -72,9 +72,46 @@ export default function Testimonials() {
             <h2 className="h2 mb-4">Our Team</h2>
           </div>
 
-          {/* Testimonials */}
+          {/* General Secretary Section */}
+          <div className="flex justify-center mb-12">
+            <div
+              className="flex flex-col h-full p-6 bg-gray-800 text-center w-full lg:w-1/3"
+              data-aos="fade-up"
+            >
+              <a href={generalSecretary.linkedin} target="_blank" rel="noopener noreferrer">
+                <div>
+                  <div className="relative inline-flex flex-col mb-4">
+                    <Image
+                      className="rounded-full"
+                      src={generalSecretary.image}
+                      width={150}
+                      height={150}
+                      alt={`${generalSecretary.name} Image`}
+                    />
+                    <svg
+                      className="absolute top-0 right-0 -mr-3 w-6 h-5 fill-current text-yellow-600"
+                      viewBox="0 0 24 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 13.517c0-2.346.611-4.774 1.833-7.283C3.056 3.726 4.733 1.648 6.865 0L11 2.696C9.726 4.393 8.777 6.109 8.152 7.844c-.624 1.735-.936 3.589-.936 5.56v4.644H0v-4.531zm13 0c0-2.346.611-4.774 1.833-7.283 1.223-2.508 2.9-4.586 5.032-6.234L24 2.696c-1.274 1.697-2.223 3.413-2.848 5.148-.624 1.735-.936 3.589-.936 5.56v4.644H13v-4.531z" />
+                    </svg>
+                  </div>
+                </div>
+                <blockquote className="text-lg text-gray-400 grow">{generalSecretary.quote}</blockquote>
+                <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
+                  <cite className="text-gray-200 not-italic">{generalSecretary.name}</cite> -{" "}
+                  <span className="text-yellow-600 hover:text-gray-200 transition duration-150 ease-in-out">
+                    <br />
+                    {generalSecretary.title}
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Joint General Secretaries Section */}
           <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none">
-            {teamMembers.map((member, index) => (
+            {jointGeneralSecretaries.map((member, index) => (
               <div
                 key={member.name}
                 className="flex flex-col h-full p-6 bg-gray-800 text-center"
@@ -112,9 +149,8 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
