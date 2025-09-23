@@ -65,7 +65,7 @@ export default function CommitteePage({
 
           {(categoryData.name) && (
             <Image
-              src={`/images/committees/${categoryData.name}/${committeeData.name.toLowerCase().split(" ")[0]}/group.png`}
+              src={`/images/committees/${categoryData.name.toLowerCase()}/${committeeData.name.toLowerCase().split(" ")[0]}/group.png`}
               alt={`${committeeData.name} Group`}
               width={600}
               height={250}
