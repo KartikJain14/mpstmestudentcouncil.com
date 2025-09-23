@@ -329,9 +329,9 @@ export const committeesData: Category[] = [
           { name: "Vansh Chedda - President", imageUrl: "/images/fests/taqneeq/core/vansh.png" },
           { name: "Aryan Bondgulwar - President", imageUrl: "/images/fests/taqneeq/core/aryan.png" },
           { name: "Juhi Purohit - Vice President", imageUrl: "/images/fests/taqneeq/core/juhi.png" },
-          { name: "Jash Sompura - Vice President", imageUrl: "/images/fests/taqneeq/core/jash.png" },
+          { name: "Jash Sompura - Chairperson", imageUrl: "/images/fests/taqneeq/core/jash.png" },
           { name: "Charvi Jain - Chairperson", imageUrl: "/images/fests/taqneeq/core/charvi.png" },
-          { name: "Siddhi Gandhi - Chairperson", imageUrl: "/images/fests/taqneeq/core/siddhi.png" },
+          { name: "Siddhi Gandhi - Vice Chairperson", imageUrl: "/images/fests/taqneeq/core/siddhi.png" },
           { name: "Jay Rakholia - Vice Chairperson", imageUrl: "/images/fests/taqneeq/core/jay.png" },
           { name: "Vidit Agrawal - Vice Chairperson", imageUrl: "/images/fests/taqneeq/core/vidit.png" },
         ],
@@ -353,7 +353,7 @@ export const committeesData: Category[] = [
         ],
       },
       {
-        name: "Conquer - Sports Fest",
+        name: "Conquer",
         vision:
           "Conquer is a sports fest.",
         flagshipEvents: [{ name: "Conquer", description: "Sports Fest" }],

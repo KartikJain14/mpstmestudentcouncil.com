@@ -15,152 +15,716 @@ type EventType = {
 };
 
 // --- Raw Event Data ---
-// This serves as the single source of truth for all events.
-// The dates are now stored as numbers for easier sorting and filtering.
+// All events from the provided CSV files, consolidated and sorted.
 const eventsData: EventType[] = [
   {
     year: 2025,
     month: 8, // September (months are 0-indexed in JS Date objects)
-    day: 15,
-    title: "Mid-term Examinations Begin",
-    description: "The official start date for the mid-term examination period for all students."
+    day: 8,
+    title: "ProdAIgy by Women In Product India",
+    description: "Workshop on Agentic AI.",
   },
   {
     year: 2025,
     month: 8,
-    day: 22,
-    title: "Project Submission Deadline",
-    description: "Final deadline for all project submissions. Please ensure all work is submitted by 11:59 PM."
+    day: 9,
+    title: "LinkedIn Workshop",
+    description: "A LinkedIn workshop organized to educate students about the benefits and prospects they'll achieve and discover through this social media platform.",
   },
   {
     year: 2025,
-    month: 9, // October
-    day: 12,
-    title: "Industrial Visit by IETE-SF",
-    description: "A scheduled industrial visit organized by the IETE-SF committee for all members.",
+    month: 8,
+    day: 15,
+    title: "Mehfil",
+    description: "An event by EDB.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 13,
-    title: "Cultural Night by Cultural Committee",
-    description: "An evening of music, dance, and cultural performances hosted by the Cultural Committee.",
-  },
-  {
-    year: 2025,
-    month: 9,
+    month: 8,
     day: 16,
-    title: "Event by IEC",
-    description: "An event organized by the Indian Electrical & Electronics Committee (IEC). Details to be announced."
-  },
-  {
-    year: 2025,
-    month: 9,
-    day: 17,
-    title: "Event by ACM/IEC",
-    description: "A collaborative event between the ACM and IEC committees."
-  },
-  {
-    year: 2025,
-    month: 9,
-    day: 18,
     title: "Blood Donation Drive",
-    description: "A two-day blood donation drive organized by the Social Impact Committee.",
-    image: "https://images.unsplash.com/photo-1579684385153-f7267104ae23?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    description: "Blood Donation Drive by Social Impact.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 19,
-    title: "Blood Donation Drive (Day 2)",
-    description: "A two-day blood donation drive organized by the Social Impact Committee.",
-    image: "https://images.unsplash.com/photo-1579684385153-f7267104ae23?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    month: 8,
+    day: 17,
+    title: "Blood Donation Drive",
+    description: "Blood Donation Drive by Social Impact.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 20,
-    title: "Karl's Terzaghi Memorial Day",
-    description: "An expert lecture by CESA on Karl's Terzaghi Memorial Day."
+    month: 8,
+    day: 18,
+    title: "Code Red 2.0",
+    description: "An event by IEEE Robotics and Automation Society.",
   },
   {
     year: 2025,
-    month: 9,
+    month: 8,
     day: 21,
-    title: "Google Cloud Campaign",
-    description: "A special campaign on Google Cloud organized by GDSC."
+    title: "CL MEET",
+    description: "An event by OUTREACH.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 22,
-    title: "BOTSON 8.0",
-    description: "An annual robotics event organized by IET."
+    month: 8,
+    day: 24,
+    title: "Gamers Asylum & Battle of Boards, Wings and Roots",
+    description: "An event by SPORTS and 4C.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 23,
-    title: "Literary Workshop",
-    description: "A workshop on creative writing and literature by the Editorial Board."
-  },
-  {
-    year: 2025,
-    month: 9,
+    month: 8,
     day: 25,
-    title: "Blind Date With A Book",
-    description: "An engaging event by the Editorial Board."
+    title: "Gamers Asylum & Battle of Boards, Wings and Roots",
+    description: "An event by SPORTS and 4C.",
   },
   {
     year: 2025,
-    month: 9,
+    month: 8,
     day: 26,
-    title: "Blind Date With A Book (Day 2)",
-    description: "An engaging event by the Editorial Board."
+    title: "Wings and Roots",
+    description: "An event by 4C.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 27,
-    title: "Mental Health Day",
-    description: "A day dedicated to mental health awareness organized by the Social Impact Committee."
+    month: 8,
+    day: 29,
+    title: "Unplanned 5.0, Findrome x Crowwd",
+    description: "One-on-one talk show between industry leaders in growing startups and fundings.",
   },
   {
     year: 2025,
-    month: 9,
-    day: 28,
-    title: "Forging Your Way 2.0",
-    description: "A technical event organized by ASME."
+    month: 8,
+    day: 30,
+    title: "Blind Date With A Book",
+    description: "An event by EDB.",
+  },
+
+   {
+    "year": 2025,
+    "month": 9,
+    "day": 1,
+    "title": "BRS & BDWAB",
+    "description": "BRS by TRC, a three-day academic event focused on research and collaboration. BDWAB by EDB."
   },
   {
-    year: 2025,
-    month: 9,
-    day: 31,
-    title: "Rahasya",
-    description: "An event organized by the Editorial Board."
+    "year": 2025,
+    "month": 9,
+    "day": 2,
+    "title": "BRS & BDWAB",
+    "description": "BRS by TRC, a three-day academic event focused on research and collaboration. BDWAB by EDB."
   },
   {
-    year: 2025,
-    month: 9,
-    day: 31,
-    title: "Emporia",
-    description: "An event organized by the 4C committee."
+    "year": 2025,
+    "month": 9,
+    "day": 3,
+    "title": "BRS & BDWAB",
+    "description": "BRS by TRC, a three-day academic event focused on research and collaboration. BDWAB by EDB."
   },
   {
-    year: 2025,
-    month: 10, // November
-    day: 2,
-    title: "Industry Expert Talk",
-    description: "An expert talk session organized by Findrome."
+    "year": 2025,
+    "month": 9,
+    "day": 4,
+    "title": "BRS, BDWAB & Aerovisions",
+    "description": "BRS by TRC, BDWAB by EDB, and Aerovisions by AeroXperts."
   },
   {
-    year: 2025,
-    month: 10,
-    day: 3,
-    title: "Mumbai MUN",
-    description: "The annual Model United Nations conference by MunSociety MPSTME.",
-    link: "https://mumbaimun.com"
-  }
+    "year": 2025,
+    "month": 9,
+    "day": 6,
+    "title": "M2 Test",
+    "description": "M2 Test."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 13,
+    "title": "Elevate Day 2",
+    "description": "Flagship event by IEEE Robotics and Automation Society."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 14,
+    "title": "Elevate Day 2",
+    "description": "Flagship event by IEEE Robotics and Automation Society."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 15,
+    "title": "Pre-event",
+    "description": "Pre-event by Data Mavericks."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 17,
+    "title": "Pre-event",
+    "description": "Pre-event activities by Sattva."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 24,
+    "title": "Pre-event",
+    "description": "Pre-event activities by Sattva."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 25,
+    "title": "Hackathon",
+    "description": "Hackathon by Data Mavericks."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 26,
+    "title": "Hackathon",
+    "description": "Hackathon by Data Mavericks."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 28,
+    "title": "Pre-event",
+    "description": "Pre-event seminar and activities by Social Impact."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 29,
+    "title": "Pre-event",
+    "description": "Pre-event activities by Taqneeq."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 30,
+    "title": "Pre-event",
+    "description": "Pre-event activities by Taqneeq."
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "day": 31,
+    "title": "Cult Night & Botson 10.0",
+    "description": "Cult Night by Cultural Committee and a speaker session by IET."
+  },
+
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 1,
+    "title": "Botson 10.0/ Adappt 3.0",
+    "description": "Flagship event, bot building/Technical Ideathon by IET/IETE."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 2,
+    "title": "Botson 10.0/ Adappt 3.0",
+    "description": "Flagship event, bot building/Technical Ideathon by IET/IETE."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 3,
+    "title": "Open mic night, FinPlay",
+    "description": "Open mic night by Music Committee (tentative) followed by jamming session (VCR) and engaging financial student fun activities by FinDrome."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 4,
+    "title": "Stockraze",
+    "description": "Flagship event - Stock Market Simulation by Colloquium."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 5,
+    "title": "Focal Point",
+    "description": "Seminars and workshops by Khachaak."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 6,
+    "title": "Mock interviews/Focal Point",
+    "description": "Seminars and workshops by Khachaak and mock interviews by Data Mavericks."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 7,
+    "title": "Mumbai MUN 2025",
+    "description": "An event by MUNSociety."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 8,
+    "title": "Mumbai MUN 2025",
+    "description": "An event by MUNSociety."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 9,
+    "title": "Mumbai MUN 2025",
+    "description": "An event by MUNSociety."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 13,
+    "title": "Social Conclave Pre Event",
+    "description": "A pre-event for the Social Conclave by Social Impact."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 14,
+    "title": "Social Conclave Pre Event",
+    "description": "A pre-event for the Social Conclave by Social Impact."
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "day": 24,
+    "title": "Final Exams ODD SEMESTER",
+    "description": "Final Exams for the Odd Semester begin."
+  },
+
+  {
+    "year": 2025,
+    "month": 11,
+    "day": 1,
+    "title": "Final Exams ODD SEMESTER",
+    "description": "Final exams for the odd semester are scheduled."
+  },
+
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 6,
+    "title": "DJ night",
+    "description": "An underground DJ night organized by the Music Committee."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 8,
+    "title": "Social Conclave Pre Conclave",
+    "description": "A pre-conclave event for the Social Conclave."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 9,
+    "title": "Social Conclave Pre Conclave",
+    "description": "A pre-conclave event for the Social Conclave."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 10,
+    "title": "Propel 25",
+    "description": "An event by Team Sudarshan (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 11,
+    "title": "Propel 25",
+    "description": "An event by Team Sudarshan (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 14,
+    "title": "4C Event",
+    "description": "An event by 4C."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 15,
+    "title": "4C Event",
+    "description": "An event by 4C."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 16,
+    "title": "Bloomberg workshop",
+    "description": "A Bloomberg workshop by FinDrome."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 17,
+    "title": "Hack n Code",
+    "description": "An overnight hackathon by IET."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 18,
+    "title": "Hack n Code",
+    "description": "An overnight hackathon by IET."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 19,
+    "title": "Expert talk",
+    "description": "An expert talk by IETE."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 20,
+    "title": "Expert Talk",
+    "description": "Industry Interaction and Expert Talk by ASCE MPSTME CESA/IETE."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 21,
+    "title": "Bizzneeti",
+    "description": "An event by Colloquium (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 22,
+    "title": "Bizzneeti",
+    "description": "An event by Colloquium."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 23,
+    "title": "Bizzneeti",
+    "description": "An event by Colloquium."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 24,
+    "title": "Cypher 5.0",
+    "description": "NMIMS Official Hackathon by Taqneeq (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 25,
+    "title": "Cypher 5.0",
+    "description": "NMIMS Official Hackathon by Taqneeq (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 27,
+    "title": "Social Conclave",
+    "description": "A UN backed conference by Social Impact."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 28,
+    "title": "Social Conclave",
+    "description": "A UN backed conference by Social Impact."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 29,
+    "title": "Social Conclave",
+    "description": "A UN backed conference by Social Impact."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 30,
+    "title": "Social Conclave",
+    "description": "A UN backed conference by Social Impact."
+  },
+  {
+    "year": 2026,
+    "month": 0,
+    "day": 31,
+    "title": "Cypher 5.0",
+    "description": "NMIMS Official Hackathon by Taqneeq (tentative)."
+  },
+
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 1,
+    "title": "Cypher 5.0",
+    "description": "NMIMS Official Hackathon by Taqneeq (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 3,
+    "title": "Inceptio 9.0",
+    "description": "An event by IEC."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 4,
+    "title": "Inceptio 9.0",
+    "description": "An event by IEC."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 5,
+    "title": "Inceptio 9.0",
+    "description": "An event by IEC."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 6,
+    "title": "Expert Talk",
+    "description": "Industry Talk by ASCE MPSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 7,
+    "title": "Hyphen",
+    "description": "An event by GDG on Campus MPSTME (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 8,
+    "title": "Hyphen",
+    "description": "An event by GDG on Campus MPSTME (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 9,
+    "title": "TEP",
+    "description": "An event by EDB."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 10,
+    "title": "TEP",
+    "description": "An event by EDB."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 13,
+    "title": "M1 Test",
+    "description": "A test for students."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 20,
+    "title": "Decibel / Technical Debate",
+    "description": "Flagship event by Music Committee (tentative) and a technical debate by IETE."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 23,
+    "title": "Decibel",
+    "description": "Performances and DJ by Music Committee (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 24,
+    "title": "Expert Talk",
+    "description": "Industry Talk by ASCE MPSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 25,
+    "title": "Taqneeq 18.0",
+    "description": "Official Tech Fest of MPSTME by TQ."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 26,
+    "title": "Taqneeq 18.0",
+    "description": "Official Tech Fest of MPSTME by TQ."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 27,
+    "title": "Taqneeq 18.0",
+    "description": "Official Tech Fest of MPSTME by TQ."
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "day": 28,
+    "title": "Taqneeq 18.0",
+    "description": "Official Tech Fest of MPSTME by TQ."
+  },
+
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 3,
+    "title": "Panel Discussion",
+    "description": "A flagship event by FinDrome (tentative)."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 4,
+    "title": "Igeniero 2026",
+    "description": "An event by ASCE MSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 5,
+    "title": "Igeniero 2026 / Social and Cultural Event",
+    "description": "An event by ASCE MSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 6,
+    "title": "Abhirva 3.0",
+    "description": "A workshop by ASCE MSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 7,
+    "title": "Abhirva 3.0",
+    "description": "A flagship event (Speaker session & Bplan) by Enactus."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 9,
+    "title": "Figma Workshop",
+    "description": "A workshop by GDG On Campus."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 11,
+    "title": "Igeniero 2026",
+    "description": "An event by ASCE MSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 12,
+    "title": "Igeniero 2026",
+    "description": "An event by ASCE MSTME CESA."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 13,
+    "title": "Igeniero 2026 / CTF",
+    "description": "Igeniero 2026 / Social and Cultural Event / Inter College Cybersecurity CTF Competition by ASCE MSTME CESA/Cyber Chakravyuh."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 15,
+    "title": "Prize distribution",
+    "description": "A prize distribution event by OUTREACH."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 18,
+    "title": "Internship Fair",
+    "description": "An Internship Fair (Tentative) by TRC."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 20,
+    "title": "Internship Fair",
+    "description": "An Internship Fair (Tentative) by TRC."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 21,
+    "title": "Semicode",
+    "description": "An event by ACM."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 22,
+    "title": "Semicode",
+    "description": "An event by ACM."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 23,
+    "title": "M2 Test",
+    "description": "A test for students."
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "day": 29,
+    "title": "Semicode",
+    "description": "An event by ACM."
+  },
+
+  {
+    "year": 2026,
+    "month": 3,
+    "day": 3,
+    "title": "IET TALKS / ULECTRO",
+    "description": "A speaker session by IET and IETE."
+  },
+  {
+    "year": 2026,
+    "month": 3,
+    "day": 4,
+    "title": "ULECTRO",
+    "description": "A flagship hardware display competition by IETE."
+  },
+  {
+    "year": 2026,
+    "month": 3,
+    "day": 11,
+    "title": "Prize distribution",
+    "description": "A prize distribution event by Outreach."
+  },
+
+  {
+    "year": 2026,
+    "month": 4,
+    "day": 1,
+    "title": "FINAL EXAMS EVEN SEMESTER",
+    "description": "Final exams for the even semester are scheduled."
+  },
 ];
 
 // Month names mapping
@@ -339,11 +903,11 @@ export default function EventCalendar() {
             {selectedEvent.image && (
                 <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
                     <Image
-                        src={selectedEvent.image}
-                        alt={selectedEvent.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="group-hover:scale-105 transition-transform duration-300"
+                      src={selectedEvent.image}
+                      alt={selectedEvent.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="group-hover:scale-105 transition-transform duration-300"
                     />
                 </div>
             )}
