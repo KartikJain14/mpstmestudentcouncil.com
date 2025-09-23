@@ -326,14 +326,14 @@ export const committeesData: Category[] = [
           },
         ],
         team: [
-          { name: "Jash Sompura", imageUrl: "/images/council-logo.png" },
-          { name: "Aryan Bondgulwar", imageUrl: "/images/council-logo.png" },
-          { name: "Vidit Agrawal", imageUrl: "/images/council-logo.png" },
-          { name: "Juhi Purohit", imageUrl: "/images/council-logo.png" },
-          { name: "Jay Rakholia", imageUrl: "/images/council-logo.png" },
-          { name: "Siddhi Gandhi", imageUrl: "/images/council-logo.png" },
-          { name: "Vansh Chedda", imageUrl: "/images/council-logo.png" },
-          { name: "Charvi Jain", imageUrl: "/images/council-logo.png" },
+          { name: "Vansh Chedda - President", imageUrl: "/images/fests/taqneeq/core/vansh.png" },
+          { name: "Aryan Bondgulwar - President", imageUrl: "/images/fests/taqneeq/core/aryan.png" },
+          { name: "Juhi Purohit - Vice President", imageUrl: "/images/fests/taqneeq/core/juhi.png" },
+          { name: "Jash Sompura - Vice President", imageUrl: "/images/fests/taqneeq/core/jash.png" },
+          { name: "Charvi Jain - Chairperson", imageUrl: "/images/fests/taqneeq/core/charvi.png" },
+          { name: "Siddhi Gandhi - Chairperson", imageUrl: "/images/fests/taqneeq/core/siddhi.png" },
+          { name: "Jay Rakholia - Vice Chairperson", imageUrl: "/images/fests/taqneeq/core/jay.png" },
+          { name: "Vidit Agrawal - Vice Chairperson", imageUrl: "/images/fests/taqneeq/core/vidit.png" },
         ],
       },
       {
@@ -367,8 +367,18 @@ export const committeesData: Category[] = [
       {
         name: "TEP - The Editorial Project",
         vision:
-          "TEP is a Editorial Board Project",
-        flagshipEvents: [{ name: "The Editorial Project", description: "EDB Fest" }],
+          "The Editorial Project (TEP) is the flagship annual fest of the Editorial Board, designed as a vibrant celebration of creativity, intellect, and collaboration. Rooted in the vision of fostering expression and dialogue, TEP brings together students, writers, artists, and performers on a common platform where ideas meet imagination.",
+        flagshipEvents: [
+          { name: "Comic Con", description: "A lively celebration of pop culture where fans, creators, and enthusiasts come together to showcase their creativity and fandoms." },
+          { name: "Open Mic Night", description: "A free-flowing stage for students to express themselves through music, poetry, stand-up, and storytelling." },
+          { name: "Book Nook", description: "A cozy corner for book lovers, featuring curated reads, discussions, and a space to bond over literature." },
+          { name: "Debate Competition", description: "A battle of ideas where participants engage in thought-provoking arguments with logic and persuasion." },
+          { name: "Artist Night", description: "The star attraction of TEP, featuring a celebrity singer who lights up the stage with a power-packed performance." },
+        ],
+
+        team: [
+          { name: "Rushil Kubavat - Chairperson", imageUrl: "/images/fests/tep/core/rushil.png" },
+        ],
       },
     ],
   },
