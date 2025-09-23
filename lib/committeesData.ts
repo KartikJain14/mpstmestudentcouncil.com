@@ -240,6 +240,40 @@ export const committeesData: Category[] = [
               "An exciting inter-NMIMS football competition that brings together teams from various NMIMS campuses.",
           },
         ],
+        team: [
+          {
+            name: "Sania Shah - Secretary",
+            imageUrl: "/images/committees/council/sports/core/sania.png",
+          },
+          {
+            name: "Tanaya Paralkar - Secretary",
+            imageUrl: "/images/committees/council/sports/core/tanaya.png",
+          },
+          {
+            name: "Shaman Shetty - Secretary",
+            imageUrl: "/images/committees/council/sports/core/shaman.png",
+          },
+          {
+            name: "Shaunak Bhopalkar - Secretary",
+            imageUrl: "/images/committees/council/sports/core/shaunak.png",
+          },
+          {
+            name: "Chitraksh Gupta - Joint Secretary",
+            imageUrl: "/images/committees/council/sports/core/chitraksh.png",
+          },
+          {
+            name: "Kriti Tiwari - Joint Secretary",
+            imageUrl: "/images/committees/council/sports/core/kriti.png",
+          },
+          {
+            name: "Jash Kankariya - Joint Secretary",
+            imageUrl: "/images/committees/council/sports/core/jash.png",
+          },
+          {
+            name: "Ananya Sharma - Joint Secretary",
+            imageUrl: "/images/committees/council/sports/core/ananya.png",
+          }
+        ],
       },
       {
         name: "TRC - Technical and Research Cell",
